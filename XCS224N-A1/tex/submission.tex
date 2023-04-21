@@ -32,6 +32,7 @@ instructions to regenerate this handout with your typeset \LaTeX{} solutions.
 % <SCPD_SUBMISSION_TAG>_4a
 \begin{answer}
   % ### START CODE HERE ###
+    For each singular vector $\textbf{v}_{j}$, $\textbf{A} \textbf{v}_{j} = \sum_{i=1}^{r} \sigma_{i} \textbf{u}_{i} \textbf{v}_{i}^{T}\textbf{v}_{j}$. Since any vector $\textbf{v}$ can be expressed as a linear combination of the singular vectors plus a vector perpendicular to the $\textbf{v}_{i}$, $\textbf{A} \textbf{v} = \sum_{i=1}^{r} \sigma_{i} \textbf{u}_{i} \textbf{v}_{i}^{T} \textbf{v}$, and matrices A and B are identical if and only if for all vectors v, $\textbf{A} \textbf{v} = \textbf{B} \textbf{v}$, thus, $\textbf{A} = \sum_{i=1}^{r} \sigma_{i} \textbf{u}_{i} \textbf{v}_{i}^{T}$ 
   % ### END CODE HERE ###
 \end{answer}
 % <SCPD_SUBMISSION_TAG>_4a
@@ -44,6 +45,10 @@ instructions to regenerate this handout with your typeset \LaTeX{} solutions.
 % <SCPD_SUBMISSION_TAG>_4b
 \begin{answer}
   % ### START CODE HERE ###
+    \begin{equation}
+    \textbf{u}_i = \frac{1}{\sigma_{i}} \textbf{A}\textbf{v}_{i}
+    \label{what_is_u}
+    \end{equation}
   % ### END CODE HERE ###
 \end{answer}
 % <SCPD_SUBMISSION_TAG>_4b
