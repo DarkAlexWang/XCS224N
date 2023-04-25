@@ -28,7 +28,7 @@ def pad_sents(sents, pad_token):
     """ Pad list of sentences according to the longest sentence in the batch.
         The paddings should be at the end of each sentence.
 
-    Note: this function an be also used when the params are list[list[int]] and (int)
+    Note: this function can be also used when the params are list[list[int]] and (int)
 
     @param sents (list[list[str]]): list of sentences, where each sentence
                                     is represented as a list of words
@@ -40,6 +40,9 @@ def pad_sents(sents, pad_token):
     sents_padded = []
 
     ### START CODE HERE (~6 Lines)
+    max_lenght = len(max(sents, key = lambda x: len(x)))
+    for sent in sents:
+        sents_padded.append(sent + [pad_token] * (max_length - len(sent)))
     ### END CODE HERE
 
     return sents_padded
