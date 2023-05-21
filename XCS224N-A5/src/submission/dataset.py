@@ -180,7 +180,7 @@ class CharCorruptionDataset(Dataset):
         truncated_document = document[:random_size]
 
 
-        random_length = np.random.normal(0.23, 0.25) # offset a bit because it will go up with the below rules
+        random_length = random.normalvariate(0.23, 0.25) # offset a bit because it will go up with the below rules
         if random_length < 0:
             random_length = 0
         if random_length > 1:
